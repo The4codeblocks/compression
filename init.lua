@@ -1,10 +1,10 @@
 local to_compress = {
 	"default:clay"
 	"default:desert_stone"
-	"default:desert_sandstone"
+	"default:desert_sand"
 	"default:stone"
-	"default:sandstone"
-	"default:silver_sandstone"
+	"default:sand"
+	"default:silver_sand"
 	"default:dry_dirt"
 	"default:gravel"
 	"default:ice"
