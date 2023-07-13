@@ -20,7 +20,7 @@ if minetest.get_modpath("moreblocks") then
 	compression.register_compressed_tiers("moreblocks:desert_cobble_compressed")
 	compression.register_compressed_tiers("moreblocks:dirt_compressed")
 else
-	compression.register_compressed_tiers("moreblocks:cobble")
-	compression.register_compressed_tiers("moreblocks:desert_cobble")
-	compression.register_compressed_tiers("moreblocks:dirt")
+	compression.register_compressed_tiers("default:cobble")
+	compression.register_compressed_tiers("default:desert_cobble")
+	compression.register_compressed_tiers("default:dirt")
 end
