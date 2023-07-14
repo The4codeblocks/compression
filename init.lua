@@ -11,7 +11,7 @@ local to_compress = {
 	"default:permafrost"
 	"default:obsidian"
 	"default:snowblock"
-    "default:coalblock"
+	"default:coalblock"
 	"wool:white"
 }
 compression.register_compressed_nodes(to_compress)
