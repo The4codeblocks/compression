@@ -18,7 +18,7 @@ local to_compress = {
 compression.register_compressed_nodes(to_compress)
 
 moreblocks_available = minetest.get_modpath("moreblocks")
-max_compression_level = minetest.settings:get("max_compression_level")
+max_compression_level = tonumber(minetest.settings:get("max_compression_level"))
 
 for level = 1, max_compression_level, 1 do
     minetest.register_craft({
