@@ -1,19 +1,20 @@
 local to_compress = {
-	"default:clay"
-	"default:desert_stone"
-	"default:desert_sand"
-	"default:stone"
-	"default:sand"
-	"default:silver_sand"
-	"default:dry_dirt"
-	"default:gravel"
-	"default:ice"
-	"default:permafrost"
-	"default:obsidian"
-	"default:snowblock"
-	"default:coalblock"
-	"wool:white"
+	"default:clay",
+	"default:desert_stone",
+	"default:desert_sand",
+	"default:stone",
+	"default:sand",
+	"default:silver_sand",
+	"default:dry_dirt",
+	"default:gravel",
+	"default:ice",
+	"default:permafrost",
+	"default:obsidian",
+	"default:snowblock",
+	"default:coalblock",
+	"wool:white",
 }
+
 compression.register_compressed_nodes(to_compress)
 
 moreblocks_available = minetest.get_modpath("moreblocks")
