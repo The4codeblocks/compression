@@ -17,8 +17,12 @@ local to_compress = {
 
 compression.register_compressed_nodes(to_compress)
 
-moreblocks_available = minetest.get_modpath("moreblocks")
-max_compression_level = tonumber(minetest.settings:get("max_compression_level") or 10)
+local moreblocks_available = minetest.get_modpath("moreblocks")
+local max_compression_level = tonumber(minetest.settings:get("max_compression_level") or 10)
+
+local mod = ""
+local moreblocks_stone_output = ""
+local moreblocks_desert_stone_output = ""
 
 if moreblocks_available then
 	compression.register_compressed_tiers("moreblocks:cobble_compressed")
