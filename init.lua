@@ -16,6 +16,7 @@ local to_compress = {
 }
 
 compression.register_compressed_nodes(to_compress)
+compression.compressed_nodes = table.copy(to_compress)
 
 local moreblocks_available = minetest.get_modpath("moreblocks")
 local max_compression_level = tonumber(minetest.settings:get("max_compression_level") or 10)
