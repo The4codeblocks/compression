@@ -1,4 +1,4 @@
-local to_compress = {
+compression.compressed_nodes = {
 	"default:clay",
 	"default:desert_stone",
 	"default:desert_sand",
@@ -15,8 +15,7 @@ local to_compress = {
 	"wool:white",
 }
 
-compression.register_compressed_nodes(to_compress)
-compression.compressed_nodes = table.copy(to_compress) 
+compression.register_compressed_nodes(compression.compressed_nodes)
 
 local moreblocks_available = minetest.get_modpath("moreblocks")
 local max_compression_level = tonumber(minetest.settings:get("max_compression_level") or 10)
