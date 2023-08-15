@@ -60,21 +60,21 @@ end
 for level = 1, max_compression_level, 1 do
     minetest.register_craft({
         type = "cooking",
-        recipe = "compression:"..mod.."_cobble_compressed_level_"..level,
-        output = "compression:default_stone_compressed_level_"..level,
-        cooktime = 3^level,
+        recipe = "compression:" .. mod .. "_cobble_compressed_level_" .. level,
+        output = "compression:default_stone_compressed_level_" .. level,
+        cooktime = 3 ^ level,
     })
     minetest.register_craft({
         type = "cooking",
-        recipe = "compression:"..mod.."_desert_cobble_compressed_level_"..level,
-        output = "compression:default_desert_stone_compressed_level_"..level,
-        cooktime = 3^level,
+        recipe = "compression:" .. mod .. "_desert_cobble_compressed_level_" .. level,
+        output = "compression:default_desert_stone_compressed_level_" .. level,
+        cooktime = 3 ^ level,
     })
     if level < 8 then
         minetest.register_craft({
             type = "fuel",
-            recipe = "compression:default_coalblock_compressed_level_"..level,
-            burntime = 370*(9^level),
+            recipe = "compression:default_coalblock_compressed_level_" .. level,
+            burntime = 370 * (9 ^ level),
         })
     end
 end
