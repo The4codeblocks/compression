@@ -15,19 +15,20 @@ compression.compressed_nodes = {
 	"wool:white",
 }
 
-compression.register_compressed_nodes(compression.compressed_nodes)
-
 local moreblocks_available = minetest.get_modpath("moreblocks")
 local max_compression_level = tonumber(minetest.settings:get("max_compression_level") or 10)
+local maxlvl = tonumber(core.settings:get("max_compression_level") or 10)
+
+compression.register_compressed_nodes(compression.compressed_nodes, maxlvl)
 
 local mod = ""
 local moreblocks_stone_output = ""
 local moreblocks_desert_stone_output = ""
 
 if moreblocks_available then
-	compression.register_compressed_tiers("moreblocks:cobble_compressed")
-	compression.register_compressed_tiers("moreblocks:desert_cobble_compressed")
-	compression.register_compressed_tiers("moreblocks:dirt_compressed")
+	compression.register_compressed_tiers("moreblocks:cobble_compressed", maxlvl)
+	compression.register_compressed_tiers("moreblocks:desert_cobble_compressed", maxlvl)
+	compression.register_compressed_tiers("moreblocks:dirt_compressed", maxlvl)
 
     if max_compression_level > 0 then
         moreblocks_stone_output, moreblocks_desert_stone_output = "compression:default_stone_compressed_level_1", "compression:default_desert_stone_compressed_level_1"
@@ -50,9 +51,9 @@ if moreblocks_available then
 
     mod = "moreblocks"
 else
-	compression.register_compressed_tiers("default:cobble")
-	compression.register_compressed_tiers("default:desert_cobble")
-	compression.register_compressed_tiers("default:dirt")
+	compression.register_compressed_tiers("default:cobble", maxlvl)
+	compression.register_compressed_tiers("default:desert_cobble", maxlvl)
+	compression.register_compressed_tiers("default:dirt", maxlvl)
 
     mod = "default"
 end
